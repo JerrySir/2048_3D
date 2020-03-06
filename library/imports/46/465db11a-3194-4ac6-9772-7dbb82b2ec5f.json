@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.SpriteAtlas",
+  "_name": "fish.plist",
+  "_objFlags": 0,
+  "_native": "",
+  "_spriteFrames": {
+    "fish_0": {
+      "__uuid__": "06f0453c-e9b5-4283-b02d-7479a65702b8"
+    },
+    "fish_1": {
+      "__uuid__": "c431cb60-b3bc-49e5-94d4-0e7eaa9275b1"
+    },
+    "fish_2": {
+      "__uuid__": "12f74655-adf4-4c58-bfdd-230c1d5c906d"
+    },
+    "fish_3": {
+      "__uuid__": "590ee603-e94f-4a4e-adce-e2b3b4f3fe82"
+    },
+    "fish_4": {
+      "__uuid__": "da357660-2aa9-4eb3-a949-eebf3e40a18d"
+    },
+    "fish_5": {
+      "__uuid__": "e3271257-2a61-4d80-9d2b-601952afc087"
+    },
+    "fish_6": {
+      "__uuid__": "90e6b8d9-2148-4f32-bb61-bdc9cf054179"
+    }
+  }
+}

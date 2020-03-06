@@ -1,1 +1,2 @@
-# 2048_3D
+# hello-world
+Hello world new project template.
