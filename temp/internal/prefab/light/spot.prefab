@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "capsule",
+    "_name": "light",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -47,15 +47,14 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_zIndex": 0,
     "_is3DNode": true,
     "groupIndex": 0,
     "_id": "",
     "_eulerAngles": {
-      "x": 0.000009334666828389458,
+      "__type__": "cc.Vec3",
+      "x": 0,
       "y": 0,
-      "z": 0,
-      "__type__": "cc.Vec3"
+      "z": 0
     },
     "_trs": {
       "__type__": "TypedArray",
@@ -68,33 +67,40 @@
         0,
         0,
         0,
-        100,
-        100,
-        100
+        1,
+        1,
+        1
       ]
     }
   },
   {
-    "__type__": "cc.MeshRenderer",
+    "__type__": "cc.Light",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 1
     },
     "_enabled": true,
-    "_srcBlendFactor": 770,
-    "_dstBlendFactor": 771,
-    "_materials": [
-      {
-        "__uuid__": "a5849239-3ad3-41d1-8ab4-ae9fea11f97f"
-      }
-    ],
-    "_mesh": {
-      "__uuid__": "83f5eff8-3385-4f95-9b76-8da0aa1d96cd"
+    "_type": 2,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
     },
-    "_receiveShadows": false,
-    "_shadowCastingMode": 0,
-    "textures": [],
+    "_intensity": 1,
+    "_range": 1000,
+    "_spotAngle": 60,
+    "_spotExp": 1,
+    "_shadowType": 0,
+    "_shadowResolution": 1024,
+    "_shadowDarkness": 0.5,
+    "_shadowMinDepth": 1,
+    "_shadowMaxDepth": 1000,
+    "_shadowDepthScale": 250,
+    "_shadowFrustumSize": 50,
+    "_shadowBias": 0.0005,
     "_id": ""
   },
   {
@@ -103,9 +109,9 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "f5331fd2-bf42-4ee3-a3fd-3e1657600eff"
     },
-    "fileId": "03MuJmYVpF+Kz929rGKeef",
+    "fileId": "33zOkteexCqamZ4PXuwJaW",
     "sync": false
   }
 ]

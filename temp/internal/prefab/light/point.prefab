@@ -45,28 +45,32 @@
       "x": 0.5,
       "y": 0.5
     },
-    "_position": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_scale": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
-      "z": 1
-    },
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": true,
     "groupIndex": 0,
     "_id": "",
     "_eulerAngles": {
+      "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "__type__": "cc.Vec3"
+      "z": 0
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
     }
   },
   {
@@ -77,7 +81,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_type": 0,
+    "_type": 1,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -86,7 +90,7 @@
       "a": 255
     },
     "_intensity": 1,
-    "_range": 1,
+    "_range": 1000,
     "_spotAngle": 60,
     "_spotExp": 1,
     "_shadowType": 0,
@@ -105,7 +109,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "ddb99b39-7004-47cd-9705-751905c43c46"
+      "__uuid__": "0cf30284-9073-46bc-9eba-e62b69dbbff3"
     },
     "fileId": "33zOkteexCqamZ4PXuwJaW",
     "sync": false

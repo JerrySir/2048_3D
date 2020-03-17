@@ -564,14 +564,14 @@
     "meta": 1583332319219,
     "relativePath": "Script/LoadScene.ts"
   },
-  "e1b90feb-a217-4493-849d-9a611900d683": {
-    "asset": 1583506127803,
-    "meta": 1583506129423,
-    "relativePath": "Script/Helloworld.ts"
-  },
   "81300170-847d-4bf3-b0f9-9e2b187fbe8f": {
     "asset": 1583507230901,
     "meta": 1583507231899,
     "relativePath": "Script/DefaultBall.ts"
+  },
+  "e1b90feb-a217-4493-849d-9a611900d683": {
+    "asset": 1583508306034,
+    "meta": 1583508310163,
+    "relativePath": "Script/Helloworld.ts"
   }
 }

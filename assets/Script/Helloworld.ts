@@ -56,7 +56,6 @@ export default class Helloworld extends cc.Component {
     }
 
     start () {
-        cc.log(this.gameBox.width)
         this.gameBox.on(cc.Node.EventType.TOUCH_MOVE, function(event){
             if (this._nextBall == null) {
                 return;
@@ -98,7 +97,6 @@ export default class Helloworld extends cc.Component {
         // 类型改为Static不可掉落
         (ball.getComponent(cc.RigidBody) as cc.RigidBody).type = cc.RigidBodyType.Static;
         let _scale = 1 + Math.log(_nextBallNum)/Math.log(2)/10.0
-        cc.log(_scale);
         ball.runAction(cc.sequence(cc.spawn(cc.rotateBy(0.5,360), cc.scaleTo(0.5,_scale), cc.fadeIn(0.5)), cc.callFunc(function(){
             this._nextBall = ball;
         }.bind(this))))

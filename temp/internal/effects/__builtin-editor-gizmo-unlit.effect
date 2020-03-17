@@ -1,33 +1,25 @@
 
-%{
-  "techniques": [
-    {
-      "stages": [
-        "transparent"
-      ],
-      "passes": [
-        {
-          "vert": "line-vs",
-          "frag": "line-fs:front",
-          "cullMode": "none",
-          "blend": true,
-          "blendEq": "add",
-          "blendSrc": "srcAlpha",
-          "blendDst": "oneMinusSrcAlpha",
-        }
-      ]
-    }
-  ],
+CCEffect %{
+  techniques:
+  - stages:
+      - transparent
+    passes:
+      - vert: gizmo-unlit-vs
+        frag: gizmo-unlit-fs:front
+        depthStencilState:
+          depthTest: false
+          depthWrite: false
+        blendState:
+          targets:
+          - blend: true
+            blendEq: add
+        rasterizerState:
+          cullMode: none
+        properties:
+          diffuseColor: { value: [1, 1, 1, 1], inspector: { type: color } }
+}%
 
-  "properties": {
-    "diffuseColor": {
-      "type": "color4",
-      "value": [1, 1, 1, 1]
-    }
-  }
-%}
-
-%% line-vs {
+CCProgram gizmo-unlit-vs %{
   precision highp float;
 
   attribute vec3 a_position;
@@ -38,14 +30,18 @@
   void main () {
     gl_Position = cc_matViewProj * cc_matWorld * vec4(a_position, 1);
   }
-}
+}%
 
-%% line-fs {
+CCProgram gizmo-unlit-fs %{
   precision highp float;
   
   #include <encodings>
-  uniform vec4 diffuseColor;
+  
+  uniform DIFFUSE_COLOR {
+    vec4 diffuseColor;
+  }
+
   vec4 front() {
     return LINEAR_TO_OUTPUT_TEXEL(diffuseColor);
   }
-}
+}%

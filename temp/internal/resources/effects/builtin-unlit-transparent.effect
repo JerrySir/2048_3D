@@ -1,36 +1,24 @@
 // Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.  
- 
-%{
-  techniques: [
-    {
-      stages: [ 'transparent' ]
-      passes: [
-        {
-          vert: unlit-vs
-          frag: unlit-fs
+CCEffect %{
+  techniques:
+  - stages:
+      - transparent
+    passes:
+      - vert: unlit-vs
+        frag: unlit-fs
+        depthStencilState:
           depthTest: true
-          depthWrite: false
-          blend: true
-          blendEq: add
-          blendSrc: srcAlpha
-          blendDst: oneMinusSrcAlpha
-          blendAlphaEq: add
-          blendSrcAlpha: one
-          blendDstAlpha: oneMinusSrcAlpha
-          
-        }
-      ]
-      layer: 0
-    }
-  ]
-  properties: {
-    diffuseTexture: {
-      type: sampler2D
-      value: null
-    }
-    diffuseColor: {
-      type: color4
-      value: [1, 1, 1, 1]
-    }
-  }
-%}
+          depthWrite: true
+        blendState:
+          targets:
+          - blend: true
+        rasterizerState:
+          cullMode: none
+        properties:
+          diffuseTexture: { value: white }
+          diffuseColor: { value: [1, 1, 1, 1], inspector: { type: color } }
+          alphaThreshold: { value: 0.5 }
+          mainTiling: { value: [1, 1] }
+          mainOffset: { value: [0, 0] }
+}%
+
